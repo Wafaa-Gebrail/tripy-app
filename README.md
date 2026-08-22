@@ -1,30 +1,70 @@
-# Dental-XRay-Image-Processing-App
+# Tripy-Travel-App
 
-Developed a WPF desktop application for processing and converting dental X-Ray images to prepare them for use in AI-based systems and image analysis workflows.
+Developed a Flutter-based travel management application that connects travelers, travel companies, trip coordinators, and place owners in one platform.
+
+The application allows users to discover and register for trips, while travel companies can manage trips and participants. Trip coordinators can manage active trips and share their real-time location with travelers.
 
 ## Features
 
-- **ROW to PNG**:
-  - Convert ROW dental X-Ray images into PNG format.
+- **Traveler Features**:
+  - Browse and search available trips.
+  - View complete trip details, routes, stops, dates, prices, and available seats.
+  - Register and cancel registration for trips.
+  - Track the trip coordinator's location in real time.
+  - Receive trip updates and notifications.
+  - Follow travel companies and interact with trip posts.
+  - View upcoming and past trips.
 
-- **PNG to ROW**:
-  - Convert PNG images into ROW format for further processing.
+- **Travel Company Management**:
+  - Manage company profiles.
+  - Create and manage trips.
+  - Define trip routes and multiple stops.
+  - Manage traveler registrations.
+  - Assign trip coordinators.
+  - Manage company employees and roles.
+  - Share trip photos, videos, and updates.
 
-- **Denoising**:
-  - Reduce noise and unwanted artifacts from dental X-Ray images.
+- **Trip Coordinator Features**:
+  - View assigned trips and participants.
+  - Start and end active trips.
+  - Share real-time GPS location with travelers.
+  - Manage trip stops and mark them as reached.
+  - Communicate with trip participants.
+  - Share photos and videos during trips.
 
-- **Image Enhancement**:
-  - Improve the quality and clarity of dental X-Ray images.
+- **Place Management**:
+  - Create and manage place profiles.
+  - Add products and services with prices and descriptions.
+  - Define place locations on the map.
+  - Allow travelers to discover nearby places.
 
-- **DentImage to PNG**:
-  - Convert DentImage dental X-Ray files into PNG format.
+- **Real-Time Trip Tracking**:
+  - Integrated **Google Maps** for displaying routes, stops, and live locations.
+  - Implemented **SignalR** for real-time communication and location updates.
+  - Track the trip coordinator's location during an active trip.
+  - Send trip progress and stop-reached events to travelers.
+  - Location updates are sent every 3 seconds during active tracking.
 
-- **AI Image Preparation**:
-  - Process and prepare dental X-Ray images for use in AI-based image analysis systems.
+- **Notifications & Localization**:
+  - Receive notifications for trip events, registrations, and updates.
+  - Support for **Arabic and English** languages.
 
 ## Technologies Used
 
-- **C#**: Main programming language.
-- **WPF**: For building the Windows desktop application and user interface.
-- **.NET**: Application development framework.
-- **Image Processing**: For image conversion, denoising, and enhancement operations.
+- **Dart & Flutter**: For building the mobile application.
+- **Cubit (flutter_bloc)**: For state management and separating business logic from the UI.
+- **SignalR**: For real-time communication, location tracking, and trip events.
+- **Google Maps**: For maps, routes, stops, and real-time location visualization.
+- **REST APIs**: For communication with backend services.
+- **Geolocation**: For obtaining and monitoring the coordinator's current location.
+- **Easy Localization**: For supporting Arabic and English languages.
+
+## Technical Highlights
+
+- Implemented real-time trip tracking using **SignalR** and **Google Maps**.
+- Implemented continuous GPS location updates during active trips.
+- Used **Cubit** to manage complex application states and business logic.
+- Implemented different workflows and permissions based on user roles.
+- Integrated map-based trip routes and multiple stops.
+- Implemented real-time trip events such as trip start, completion, stop reached, and location updates.
+- Built a multi-role travel platform supporting travelers, companies, coordinators, and place owners.
